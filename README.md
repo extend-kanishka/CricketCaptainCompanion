@@ -23,7 +23,11 @@
 
 ## 📃 Table of Contents
 - [About](#-about)
-- [Features](#-features)
+- [Features](#-features) 
+- [Tech Stack](#-tech-stack)
+- [Database Schema](#database-schema)
+- 
+- 
 - [Certification](#-certification)
 - [How to Build](#-how-to-build)
 - [Documentation](#-documentation)
@@ -60,19 +64,67 @@
 
 
 
-## 🧱 Database Schema (ER Diagram)
+## 🧱 Database Schema
 
-The database consists of the following key entities:
-- `users`: Login credentials and role information.
-- `players`: Basic info of each player.
-- `matches`: Metadata of each match.
-- `batting_stats`, `bowling_stats`, `fielding_stats`: Match-wise stats for each player.
+🧍‍♂️ players Table
+| Column | Type        | Constraints |
+| ------ | ----------- | ----------- |
+| `id`   | SERIAL      | PRIMARY KEY |
+| `name` | VARCHAR(40) | NOT NULL    |
+| `age`  | INT         | NOT NULL    |
+| `type` | VARCHAR(40) | —           |
 
-All stat tables use foreign keys referencing `players` and `matches` for relational integrity.
+👤 users Table
+| Column      | Type        | Constraints          |
+| ----------- | ----------- | ------------------- |
+| `id`        | SERIAL      | PRIMARY KEY          |
+| `username`  | VARCHAR(40) | NOT NULL, UNIQUE     |
+| `password`  | VARCHAR(40) | NOT NULL            |
+| `role`      | VARCHAR(20) | NOT NULL            |
+| `player_id` | INT         | UNIQUE, FOREIGN KEY|
 
-> Designed using [dbdiagram.io](https://dbdiagram.io)
+🏏 matches Table
+| Column       | Type        | Constraints   |
+| ------------ | ----------- | --------------|
+| `id`         | SERIAL      | PRIMARY KEY  |
+| `match_date` | DATE        | NOT NULL |
+| `opponent`   | VARCHAR(20) | —           |
+| `location`   | VARCHAR(20) | —             |
+| `match_type` | VARCHAR(20) | —            |
 
----
+🪖 batting_stats Table
+| Column        | Type    | Constraints                 |
+| ------------- | ------- | --------------------------- |
+| `id`          | SERIAL  | PRIMARY KEY                 |
+| `player_id`   | INT     | FOREIGN KEY |
+| `match_id`    | INT     | FOREIGN KEY |
+| `runs_scored` | INT     | DEFAULT 0                   |
+| `balls_faced` | INT     | DEFAULT 0                   |
+| `fours`       | INT     | DEFAULT 0                   |
+| `sixes`       | INT     | DEFAULT 0                   |
+| `dismissal`   | BOOLEAN | DEFAULT FALSE               |
+
+🎯 bowling_stats Table
+| Column          | Type   | Constraints                 |
+| --------------- | ------ | --------------------------- |
+| `id`            | SERIAL | PRIMARY KEY                 |
+| `player_id`     | INT    | FOREIGN KEY  |
+| `match_id`      | INT    | FOREIGN KEY  |
+| `balls_bowled`  | INT    | DEFAULT 0                   |
+| `runs_conceded` | INT    | DEFAULT 0                   |
+| `wickets`       | INT    | DEFAULT 0                   |
+| `maidens`       | INT    | DEFAULT 0                   |
+
+🧤 fielding_stats Table
+| Column      | Type   | Constraints  |
+| ----------- | ------ | ------------- |
+| `id`        | SERIAL | PRIMARY KEY   |
+| `player_id` | INT    | FOREIGN KEY |
+| `match_id`  | INT    | FOREIGN KEY  |
+| `catches`   | INT    | DEFAULT 0   |
+| `run_outs`  | INT    | DEFAULT 0    |
+| `stumpings` | INT    | DEFAULT 0   |
+
 
 ## 🎯 Objectives
 
