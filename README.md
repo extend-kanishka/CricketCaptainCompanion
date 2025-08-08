@@ -1,5 +1,9 @@
 # 🏏 Cricket Captain Companion
+
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![language](https://img.shields.io/badge/language-python-3670A0)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-green)
 ![OS](https://img.shields.io/badge/OS-windows-0078D4)
 ![CPU](https://img.shields.io/badge/CPU-x64-FF8C00)
 [![GitHub release](https://img.shields.io/github/v/release/prasannaexe/CricketCaptainCompanion)](#)
@@ -17,13 +21,189 @@
 
 
 
-## Table of Contents
+## 📃 Table of Contents
 - [About](#-about)
+- [Features](#-features)
 - [Certification](#-certification)
 - [How to Build](#-how-to-build)
 - [Documentation](#-documentation)
 - [Feedback and Contributions](#-feedback-and-contributions)
 - [License](#-license)
-- [Contacts](#%EF%B8%8F-contacts)
+
+
+
+
+## 📌 Features
+
+- 🔐 **Role-Based Login**: Separate interfaces for captains and players.
+- 👤 **Player Management**: Add/edit player profiles and credentials.
+- 🏟️ **Match Management**: Store date, location, opponent, and type of match.
+- 📊 **Performance Entry**: Add batting, bowling, and fielding stats per player per match.
+- 📈 **Form Analysis**: View player performance over last N matches or custom date range.
+- 🖥️ **Clean GUI**: Built with Tkinter and Treeview for a polished interface.
+
+
+
+## 🧠 Tech Stack
+
+
+
+| Layer         | Tech Used                                 |
+|---------------|-------------------------------------------|
+| 🖥️ Frontend   | `Tkinter`                                 |
+| ⚙️ Logic      | `Python 3.13.5`                            |
+| 🔌 Connector  | `psycopg2`          |
+| 🗄️ Database Host  |  `Supabase`         |
+| 🧑‍💻 Code Editor  | `Visual Studio Code`   |
+| ☁️ Code Hosting  | `GitHub`              |
+| 🛠️ Packaging     | `PyInstaller`         |
+
+
+
+## 🧱 Database Schema (ER Diagram)
+
+The database consists of the following key entities:
+- `users`: Login credentials and role information.
+- `players`: Basic info of each player.
+- `matches`: Metadata of each match.
+- `batting_stats`, `bowling_stats`, `fielding_stats`: Match-wise stats for each player.
+
+All stat tables use foreign keys referencing `players` and `matches` for relational integrity.
+
+> Designed using [dbdiagram.io](https://dbdiagram.io)
+
+---
+
+## 🎯 Objectives
+
+1. Design a normalized relational schema with 4+ interlinked tables.
+2. Implement role-based login and access control.
+3. Enable captains to input and analyze player stats.
+4. Allow filtering by recent matches or custom date ranges.
+5. Build an intuitive, easy-to-use desktop GUI.
+
+---
+
+## 🧪 Sample Output
+
+> Similar to platforms like Cricinfo:
+> - Top scorers over last 5 matches.
+> - Best bowling figures in last month.
+> - Most catches in a tournament.
+> - Average, Strike Rate, Economy comparisons.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.13.5
+- PostgreSQL
+- `psycopg2` installed
+- Tkinter (comes with Python)
+
+### Clone and Run
+
+```bash
+git clone https://github.com/yourusername/CricketCaptainCompanion.git
+cd CricketCaptainCompanion
+python main.py
+```
+
+## 🤝 Acknowledgements
+
+Respected Er. Rajad Shakya – for providing guidance throughout the project.
+
+Open-source communities, YouTube educators & documentation authors.
+
+All contributors and developers behind Python, PostgreSQL, and open tools.
+
+Team members for their hard work and collaboration.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+## 👤 Author
+
+Prasanna Paudel
+079BEI023 – Thapathali Campus, IOE, TU
+🔗 GitHub
+
+## Directory Structure
+```
+Care-Connect
+├─ care_connect
+│  ├─ care_connect
+│  │  └─ python_files
+│  ├─ dashboard
+│  │  ├─ migrations
+│  │  ├─ templates/dashboard
+│  │  │  └─ dashbaord_html_files
+│  │  └─ python_files
+│  ├─ static/css
+│  │  └─ css_files
+│  ├─ templates
+│  │  └─ html_files
+│  ├─ theme
+│  ├─ manage.py
+│  ├─ package_lock.json
+│  └─ package.json
+├─ care connect proposal.pdf
+├─ README.md
+├─ care connect.sql
+└─ requirements.txt
+```
+## 🛠️ Issues Encountered
+
+- **Supabase Lag**: Integrating Supabase slowed down queries due to online latency. We optimized by caching and restructuring our DB calls.
+
+- **PyInstaller Packaging**: Some image and config file paths broke when building `.exe`. Fixed by restructuring `Assets/` and using relative paths.
+
+- **Tkinter Layout on Full HD**: Getting consistent layout across 1920x1080 resolution required pixel-perfect geometry tuning.
+
+- **Cursor Already Closed Errors**: Fixed by using separate cursors per DB operation in `psycopg2`.
+
+---
+
+## 🧠 Lessons Learned
+
+- Learned real-world use of SQL joins, aggregation, and complex filters for stats queries.
+
+- Improved Python GUI design using `Tkinter`, `ttk.Treeview`, and `matplotlib`.
+
+- Understood the trade-offs between local databases vs. cloud-hosted services (Supabase/PostgreSQL).
+
+- Understood the challenge of balancing UI design with backend performance.
+
+---
+
+## 🎯 Future Enhancements
+
+- Add player vs player comparisons in visual graphs.
+
+- Build a cloud dashboard version for teams with login and role access.
+
+- Add PDF export for stats and charts.
+
+- Build a mobile version with Flutter or React Native.
+
+- Implement dark mode for better UX.
+
+---
+
+## 🧑‍💻 Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for new stat types, UI improvements, or bug fixes.
+
+### Steps:
+
+1. Fork the repository.  
+2. Clone your fork:
+   ```bash
+   git clone https://github.com/yourusername/CricketCaptainCompanion.git
+
+---
+
 
   
