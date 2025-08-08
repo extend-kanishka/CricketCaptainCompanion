@@ -126,25 +126,8 @@
 | `stumpings` | INT    | DEFAULT 0   |
 
 
-## 🎯 Objectives
-
-1. Design a normalized relational schema with 4+ interlinked tables.
-2. Implement role-based login and access control.
-3. Enable captains to input and analyze player stats.
-4. Allow filtering by recent matches or custom date ranges.
-5. Build an intuitive, easy-to-use desktop GUI.
-
 ---
 
-## 🧪 Sample Output
-
-> Similar to platforms like Cricinfo:
-> - Top scorers over last 5 matches.
-> - Best bowling figures in last month.
-> - Most catches in a tournament.
-> - Average, Strike Rate, Economy comparisons.
-
----
 
 ## 🚀 Getting Started
 
@@ -163,48 +146,36 @@ cd CricketCaptainCompanion
 python main.py
 ```
 
-## 🤝 Acknowledgements
-
-Respected Er. Rajad Shakya – for providing guidance throughout the project.
-
-Open-source communities, YouTube educators & documentation authors.
-
-All contributors and developers behind Python, PostgreSQL, and open tools.
-
-Team members for their hard work and collaboration.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-## 👤 Author
-
-Prasanna Paudel
-079BEI023 – Thapathali Campus, IOE, TU
-🔗 GitHub
-
 ## Directory Structure
 ```
-Care-Connect
-├─ care_connect
-│  ├─ care_connect
-│  │  └─ python_files
-│  ├─ dashboard
-│  │  ├─ migrations
-│  │  ├─ templates/dashboard
-│  │  │  └─ dashbaord_html_files
-│  │  └─ python_files
-│  ├─ static/css
-│  │  └─ css_files
-│  ├─ templates
-│  │  └─ html_files
-│  ├─ theme
-│  ├─ manage.py
-│  ├─ package_lock.json
-│  └─ package.json
-├─ care connect proposal.pdf
-├─ README.md
-├─ care connect.sql
-└─ requirements.txt
+Cricket-Captain-Companion
+├─ Assets
+│  ├─ bitmap.png
+│  ├─ button1.png
+│  ├─ button2.png
+│  ├─ button3.png
+│  ├─ button4.png
+│  └─ path6.png
+├─ dist
+│  └─ main.exe
+├─ .gitignore
+├─ admin_interface.py
+├─ batsman_stats_recentmatches.py
+├─ batsman_stats_timeframe.py
+├─ bowler_stats_recentmatches.py
+├─ bowler_stats_timeframe.py
+├─ config.ini
+├─ db_connection.py
+├─ LICENSE
+├─ main.py
+├─ main.spec
+├─ player_view_dashboard.py
+├─ player_view_match_by_match.py
+├─ README.md
+├─ requirements.txt
+├─ update_stats_tab.py
+├─ user_interface.py
+└─ view_stats.py
 ```
 ## 🛠️ Issues Encountered
 
@@ -256,6 +227,25 @@ Contributions are welcome! Please open issues or submit pull requests for new st
    git clone https://github.com/yourusername/CricketCaptainCompanion.git
 
 ---
+
+## 🤝 Acknowledgements
+
+Respected Er. Rajad Shakya – for providing guidance throughout the project.
+
+Open-source communities, YouTube educators & documentation authors.
+
+All contributors and developers behind Python, PostgreSQL, and open tools.
+
+Team members for their hard work and collaboration.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+## 👤 Author
+
+Prasanna Paudel
+079BEI023 – Thapathali Campus, IOE, TU
+🔗 GitHub
 
 
   
