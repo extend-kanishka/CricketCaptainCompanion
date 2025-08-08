@@ -219,12 +219,22 @@ Cricket-Captain-Companion
 
 Contributions are welcome! Please open issues or submit pull requests for new stat types, UI improvements, or bug fixes.
 
+Please ensure your pull request adheres to the following guidelines:
+
+- Alphabetize your entry.
+- Search for previous suggestions before making a new one, as yours may be a duplicate.
+- Suggested READMEs should be beautiful or stand out in some way.
+- Make an individual pull request for each suggestion.
+- New categories or improvements to the existing categorization are welcome.
+- Keep descriptions short and simple, but descriptive.
+- Start the description with a capital and end with a full stop/period.
+- Check your spelling and grammar.
+- Make sure your text editor is set to remove trailing whitespace.
+- Use the `#readme` anchor for GitHub READMEs to link them directly.
+
+Thank you for your suggestions!
 ### Steps:
 
-1. Fork the repository.  
-2. Clone your fork:
-   ```bash
-   git clone https://github.com/yourusername/CricketCaptainCompanion.git
 
 ---
 
@@ -236,15 +246,17 @@ Open-source communities, YouTube educators & documentation authors.
 
 All contributors and developers behind Python, PostgreSQL, and open tools.
 
-Team members for their hard work and collaboration.
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 ## 👤 Author
 
 Prasanna Paudel
+
 079BEI023 – Thapathali Campus, IOE, TU
+
 🔗 GitHub
 
 
