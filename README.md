@@ -31,7 +31,7 @@
 - [Database Schema](#-database-schema)
 - [Directory Structure](#-directory-structure)
 - [Issues Encountered](#-issues-encountered)
-- [Future Enhancements](#-future_enhancements)
+- [Future Enhancements](#-future-enhancements)
 - [Lessons Learnt](#-lessons-learnt)
 - [Acknowledgements](#-acknowledgements)
 - [Contributing](#-contributing)
@@ -150,7 +150,7 @@ cd CricketCaptainCompanion
 python main.py
 ```
 
-## Directory Structure
+## 📁 Directory Structure
 ```
 Cricket-Captain-Companion
 ├─ Assets
@@ -183,7 +183,7 @@ Cricket-Captain-Companion
 ```
 
 
-## 🛠️ Issues Encountered
+## 🛠 Issues Encountered
 
 ### Slow Startup in Cloud Edition
 The initial startup of app loads around 10 interface pages with data fetched directly from the database , which caused around 30 seconds delay. Additionally, basic operations like adding, editing, or deleting players/matches/stats took ~2 seconds each due to online query latency.
