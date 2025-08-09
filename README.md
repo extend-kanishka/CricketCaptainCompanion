@@ -136,7 +136,7 @@ If you want to use the source code instead of pre-built executables:
 
       python main.py
 
-(for video tutorial you can click on this link)
+
 
 
 #### Option 2: Clone the repository (Recommended for developers)
@@ -159,7 +159,7 @@ If you want to use the source code instead of pre-built executables:
 
       python main.py
 
-(for video tutorial you can click on this link)
+
 
 ## 🖥 App Interface
 Here is a showcase of how the application looks and what functionality it offers from the perspective of the Admin and Users:
