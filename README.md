@@ -85,13 +85,14 @@ There are two versions of the application downloadable CCC-Cloud with supabase h
 - Internet Connection: requires a stable internet connection to access the Supabase-hosted database.
 - Patience: requires around 30 seconds time for starting up because ~10 pages need to be filled with data fetched from supabase at startup.
 
-(for video turorial you can click on this link)
+[Video Tutorial](https://www.youtube.com/watch?v=py6F1E-n-8c)
+
 ### CCC Standalone
 - Display Resolution: require a display resolution around Full HD (1920×1080 ± 200px) for optimal layout and usability.
 - Database: requires postgreSQL to be installed in the device locally and a database named cricket be created via pgadmin or psql.
 - Config.ini : edit the config.ini file to match its contents with the credentials of the database cricket which you created.
 
-(for video tutorial you can click on this link)
+[Video Tutorial](https://www.youtube.com/watch?v=6-lGYn0ZKbw) 
   
 ---
 (Both versions are bundled with Python and required libraries, so no external dependencies are needed.
@@ -110,7 +111,9 @@ You can download the pre-built executable versions from the Releases section by 
 
 - Run the executable inside (ccc-cloud.exe or ccc-standalone.exe).
 
-(for video tutorial you can click on this link)
+[Video Tutorial to downlaod CCC-Standalone](https://www.youtube.com/watch?v=6-lGYn0ZKbw&t=144s)
+
+[Video Tutorial to download CCC-Cloud](https://www.youtube.com/watch?v=py6F1E-n-8c&t=32s)
 
 
 ### 💻 Using Source Code
