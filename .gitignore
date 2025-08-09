@@ -2,4 +2,3 @@ __pycache__/
 *.pyc
 .vscode/
 .env
-db_connection.py
