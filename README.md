@@ -97,61 +97,58 @@ If running source code directly, install Python 3.13+ and dependencies listed in
 
 
 ## ⬇ Installation
-📦 Download Releases
+### 📦 Download Releases
 
-You can download the pre-built executable versions from the Releases section:
+You can download the pre-built executable versions from the Releases section by following these steps:
 
+- Download the desired ZIP file from the links above.
 
-Instructions:
+- Extract/unzip the folder to your preferred location.
 
-    Download the desired ZIP file from the links above.
+- Run the executable inside (ccc-cloud.exe or ccc-standalone.exe).
 
-    Extract/unzip the folder to your preferred location.
-
-    Run the executable inside (ccc-cloud.exe or ccc-standalone.exe).
-
-💻 Using Source Code
+### 💻 Using Source Code
 
 If you want to use the source code instead of pre-built executables:
-Option 1: Download ZIP
 
-    Click the Code button on the GitHub repository page.
+#### Option 1: Download ZIP
 
-    Select Download ZIP.
+- Click the Code button on the GitHub repository page.
 
-    Extract the ZIP file to your computer.
+- Select Download ZIP.
 
-    Make sure you have Python 3.13+ installed.
+- Extract the ZIP file to your computer.
 
-    Open a terminal (Command Prompt or PowerShell) and navigate to the extracted folder.
+- Make sure you have Python 3.13+ installed.
 
-    Install dependencies with:
+- Open a terminal (Command Prompt or PowerShell) and navigate to the extracted folder.
 
-pip install -r requirements.txt
+- Install dependencies with:
 
-Run the app:
+      pip install -r requirements.txt
+- Run the app:
 
-    python main.py
+      python main.py
 
-Option 2: Clone the repository (Recommended for developers)
+#### Option 2: Clone the repository (Recommended for developers)
 
-    Install Git if you don’t have it already.
+- Install Git if you don’t have it already.
 
-    Open a terminal and run:
+- Open a terminal and run:
 
-git clone https://github.com/prasannaexe/CricketCaptainCompanion.git
+      git clone https://github.com/prasannaexe/CricketCaptainCompanion.git
 
-Navigate into the cloned folder:
+- Navigate into the cloned folder:
 
-cd CricketCaptainCompanion
+      cd CricketCaptainCompanion
 
-Install dependencies:
+- Install dependencies:
 
-pip install -r requirements.txt
+      pip install -r requirements.txt
 
-Run the app:
+- Run the app:
 
-python main.py
+      python main.py
 
 ## 🖥 App Interface
 
@@ -220,25 +217,7 @@ python main.py
 | `stumpings` | INT    | DEFAULT 0   |
 
 
----
 
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.13.5
-- PostgreSQL
-- `psycopg2` installed
-- Tkinter (comes with Python)
-
-### Clone and Run
-
-```bash
-git clone https://github.com/yourusername/CricketCaptainCompanion.git
-cd CricketCaptainCompanion
-python main.py
-```
 
 ## 📁 Directory Structure
 ```
