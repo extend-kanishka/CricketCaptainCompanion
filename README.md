@@ -25,14 +25,18 @@
 - [About](#-about)
 - [Features](#-features) 
 - [Tech Stack](#-tech-stack)
-- [Database Schema](#database-schema)
-- 
-- 
-- [Certification](#-certification)
-- [How to Build](#-how-to-build)
-- [Documentation](#-documentation)
-- [Feedback and Contributions](#-feedback-and-contributions)
+- [Prerequisite](#-prerequisite)
+- [Installation](#-installation)
+- [App Interface](#-app-interface)
+- [Database Schema](#-database-schema)
+- [Directory Structure](#-directory-structure)
+- [Issues Encountered](#-issues-encountered)
+- [Future Enhancements](#-future_enhancements)
+- [Lessons Learnt](#-lessons-learnt)
+- [Acknowledgements](#-acknowledgements)
+- [Contributing](#-contributing)
 - [License](#-license)
+- [Author](#-author)
 
 
 
@@ -177,47 +181,68 @@ Cricket-Captain-Companion
 ├─ user_interface.py
 └─ view_stats.py
 ```
+
+
 ## 🛠️ Issues Encountered
 
-- **Supabase Lag**: Integrating Supabase slowed down queries due to online latency. We optimized by caching and restructuring our DB calls.
+### Slow Startup in Cloud Edition
+The initial startup of app loads around 10 interface pages with data fetched directly from the database , which caused around 30 seconds delay. Additionally, basic operations like adding, editing, or deleting players/matches/stats took ~2 seconds each due to online query latency.
 
-- **PyInstaller Packaging**: Some image and config file paths broke when building `.exe`. Fixed by restructuring `Assets/` and using relative paths.
+### Foreign Key Deletion Restrictions
+Users linked to other tables ( batting or bowling stats) could not be deleted without first removing all associated records, due to foreign key constraints.
 
-- **Tkinter Layout on Full HD**: Getting consistent layout across 1920x1080 resolution required pixel-perfect geometry tuning.
+### Resolution-Specific Layout Challenges
+While the main layout was dynamic, some pages had too many widgets to scale cleanly, resulting in layouts optimized mainly for 1920×1080 ± 200px resolutions. Certain elements had to be hardcoded for proper alignment.
 
-- **Cursor Already Closed Errors**: Fixed by using separate cursors per DB operation in `psycopg2`.
+### No Data Isolation in Demo Cloud Version
+To keep the demo version simple and avoid further slowdowns, all users shared a single public database in the cloud build. This allowed quick testing, but meant captains could view all players, not just those on their team. So the cloud version is there for demonstration only.
 
----
 
-## 🧠 Lessons Learned
-
-- Learned real-world use of SQL joins, aggregation, and complex filters for stats queries.
-
-- Improved Python GUI design using `Tkinter`, `ttk.Treeview`, and `matplotlib`.
-
-- Understood the trade-offs between local databases vs. cloud-hosted services (Supabase/PostgreSQL).
-
-- Understood the challenge of balancing UI design with backend performance.
-
----
 
 ## 🎯 Future Enhancements
 
-- Add player vs player comparisons in visual graphs.
+- Implement search feature in the update stats tab for quickly updating the filtered statistics.
 
-- Build a cloud dashboard version for teams with login and role access.
+- Use indexing on frequently queried columns to speed up database operations.
 
-- Add PDF export for stats and charts.
+- Mechanism to export the graphs made using matplotlib to pdf formats .
 
-- Build a mobile version with Flutter or React Native.
+- Allow user deletion without requiring manual removal of all related stats.
 
-- Implement dark mode for better UX.
+- Merge the current 4 search pages to a single search page with all possible filters.
 
----
+
+## 🧠 Lessons Learnt
+
+
+- Learned real world use of SQL joins, aggregation, and complex filters for stats queries.
+
+- Learned Python GUI design using `Tkinter`, `ttk.Treeview`, and `matplotlib`.
+
+- Understood the trade-offs between local databases vs. cloud-hosted ones (speed vs convenience)
+
+- Understood the challenges of making an interface capable of running in a variety of resolutions.
+
+- Understood the challenges optimizing database performance through the use of indices.
+
+
+
+## 🤝 Acknowledgements
+
+Respected Sir 🙏🙏 Er. Rajad Shakya👑– for providing us the opportunity and guidance.
+
+Open-source communities, Subreddits & documentation authors.
+
+All contributors and developers of Python, PostgreSQL, and psycopg2.
+
+Youtube channels (Codemy.com , M Prashant Tech, techTFQ, Code first with Hala)
+
+AI (Chat gpt , Grok and Gemini) for thier recommendations and ideas.
+
 
 ## 🧑‍💻 Contributing
 
-Contributions are welcome! Please open issues or submit pull requests for new stat types, UI improvements, or bug fixes.
+Contributions are welcome! Please open issues or submit pull requests for new features, UI improvements, or bug fixes.
 
 Please ensure your pull request adheres to the following guidelines:
 
@@ -233,29 +258,22 @@ Please ensure your pull request adheres to the following guidelines:
 - Use the `#readme` anchor for GitHub READMEs to link them directly.
 
 Thank you for your suggestions!
-### Steps:
 
-
----
-
-## 🤝 Acknowledgements
-
-Respected Er. Rajad Shakya – for providing guidance throughout the project.
-
-Open-source communities, YouTube educators & documentation authors.
-
-All contributors and developers behind Python, PostgreSQL, and open tools.
 
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+
+
 ## 👤 Author
 
 Prasanna Paudel
 
-079BEI023 – Thapathali Campus, IOE, TU
+Department of Electronics and Computer Engineering
+
+Thapathali Campus, IOE, TU
 
 🔗 GitHub
 
