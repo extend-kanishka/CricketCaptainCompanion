@@ -41,7 +41,11 @@
 
 ## ℹ️ About
 <img src="https://private-user-images.githubusercontent.com/123853733/475893474-bb2d59cd-8275-437d-b5f4-a8e9ba3c5d07.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTQ3MTE3MTcsIm5iZiI6MTc1NDcxMTQxNywicGF0aCI6Ii8xMjM4NTM3MzMvNDc1ODkzNDc0LWJiMmQ1OWNkLTgyNzUtNDM3ZC1iNWY0LWE4ZTliYTNjNWQwNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgwOVQwMzUwMTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04MTk1YzEwYjIwM2I2OTU5YjY5MDlhYmQxYmE3NzdmNWJlNTY5YWMxMDA2YTg0ZTFmMWQ0ZjI1OWNkODEwMTMxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.P_-Pbey2vjmevWrzu9XqCHAG93IA-kKUwiBFF6iV7Gk" align="right" alt="Cricket Captain Companion screenshot" width="350" style="margin-left: 15px; margin-bottom: 15px;">
-Cricket Captain Companion is a Windows-based desktop application designed to assist cricket team captains in player selection by allowing them to view their players performance over a certain time frame or range of matches. The application offers a user-friendly interface built with python's built in gui library tkinter. Captains can record each player’s batting, bowling, and fielding statistics per match. It features role-based access, allowing captains full data access with advanced analysis tools while players can view only their own recent performances. This design helps prevent players from comparing themselves with teammates, which can sometimes lead to overconfidence or unnecessary pressure - factors that can otherwise affect their performance on the field. Captains can filter and sort data by parameters such as total runs, batting average, or wickets taken within a given timeframe or a fixed number of recent matches. Using capable PostgreSQL database it’s ideal for domestic tournaments lacking advanced analysis tools and for school/college matches to record performances and select award-winning players.
+Cricket Captain Companion is a Windows-based desktop application designed to assist cricket team captains in player selection by allowing them to view their players performance over a certain time frame or range of matches. The application offers a user-friendly interface built with python's built in gui library tkinter. Captains can record each player’s batting, bowling, and fielding statistics per match. It features role-based access, allowing captains(admin) full data access with advanced analysis tools while players(user) can view only their own recent performances. This design helps prevent players from comparing themselves with teammates, which can sometimes lead to overconfidence or unnecessary pressure - factors that can affect their performance on the field. Captains can filter and sort data by parameters such as total runs, batting average, or wickets taken within a given timeframe or a fixed number of recent matches. Using capable PostgreSQL database it’s ideal for domestic tournaments lacking advanced analysis tools and for school/college matches to record performances and select award-winning players. 
+
+---
+
+There are two versions of the application downloadable CCC-Cloud with supabase hosting its database. Acts as a demo version as it doesnt need any dependencies ( Just install and run ). The main version CCC-Standalone needs PostgreSQL downloaded and it needs to be setup for the connection with app. Procedures are shown in  [Prerequisite](#-prerequisite) section.
 
 
 
@@ -76,13 +80,28 @@ Cricket Captain Companion is a Windows-based desktop application designed to ass
 
 ## ⚙ Prerequisite
 
-dfsfd
+### CCC Cloud
+- Display Resolution: require a display resolution around Full HD (1920×1080 ± 200px) for optimal layout and usability.
+- Internet Connection: requires a stable internet connection to access the Supabase-hosted database.
+- Patience: requires around 30 seconds time for starting up because ~10 pages need to be filled with data fetched from supabase at startup.
+(for video turorial you can click on this link)
+### CCC Standalone
+- Display Resolution: require a display resolution around Full HD (1920×1080 ± 200px) for optimal layout and usability.
+- Database: requires postgreSQL to be installed in the device locally and a database named cricket be created via pgadmin or psql.
+- Config.ini : edit the config.ini file to match its contents with the credentials of the database cricket which you created.
+(for video tutorial you can click on this link)
+  
+---
+(Both versions are bundled with Python and required libraries, so no external dependencies are needed.
+If running source code directly, install Python 3.13+ and dependencies listed in requirements.txt file)
+
+
 ## ⬇ Installation
 
-sdfsdf
+
 ## 🖥 App Interface
 
-sdfsdf
+
 
 
 ## 🧱 Database Schema
