@@ -97,7 +97,61 @@ If running source code directly, install Python 3.13+ and dependencies listed in
 
 
 ## ⬇ Installation
+📦 Download Releases
 
+You can download the pre-built executable versions from the Releases section:
+
+
+Instructions:
+
+    Download the desired ZIP file from the links above.
+
+    Extract/unzip the folder to your preferred location.
+
+    Run the executable inside (ccc-cloud.exe or ccc-standalone.exe).
+
+💻 Using Source Code
+
+If you want to use the source code instead of pre-built executables:
+Option 1: Download ZIP
+
+    Click the Code button on the GitHub repository page.
+
+    Select Download ZIP.
+
+    Extract the ZIP file to your computer.
+
+    Make sure you have Python 3.13+ installed.
+
+    Open a terminal (Command Prompt or PowerShell) and navigate to the extracted folder.
+
+    Install dependencies with:
+
+pip install -r requirements.txt
+
+Run the app:
+
+    python main.py
+
+Option 2: Clone the repository (Recommended for developers)
+
+    Install Git if you don’t have it already.
+
+    Open a terminal and run:
+
+git clone https://github.com/prasannaexe/CricketCaptainCompanion.git
+
+Navigate into the cloned folder:
+
+cd CricketCaptainCompanion
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Run the app:
+
+python main.py
 
 ## 🖥 App Interface
 
