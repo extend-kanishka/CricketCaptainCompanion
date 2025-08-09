@@ -24,7 +24,7 @@
 - [About](#ℹ️-about)
 - [Features](#-features) 
 - [Tech Stack](#-tech-stack)
-- [Prerequisite](#-prerequisite)
+- [Requirements](#-requirements)
 - [Installation](#-installation)
 - [App Interface](#-app-interface)
 - [Database Schema](#-database-schema)
@@ -78,17 +78,19 @@ There are two versions of the application downloadable CCC-Cloud with supabase h
 
 
 
-## ⚙ Prerequisite
+## ⚙ Requirements
 
 ### CCC Cloud
 - Display Resolution: require a display resolution around Full HD (1920×1080 ± 200px) for optimal layout and usability.
 - Internet Connection: requires a stable internet connection to access the Supabase-hosted database.
 - Patience: requires around 30 seconds time for starting up because ~10 pages need to be filled with data fetched from supabase at startup.
+
 (for video turorial you can click on this link)
 ### CCC Standalone
 - Display Resolution: require a display resolution around Full HD (1920×1080 ± 200px) for optimal layout and usability.
 - Database: requires postgreSQL to be installed in the device locally and a database named cricket be created via pgadmin or psql.
 - Config.ini : edit the config.ini file to match its contents with the credentials of the database cricket which you created.
+
 (for video tutorial you can click on this link)
   
 ---
@@ -97,6 +99,7 @@ If running source code directly, install Python 3.13+ and dependencies listed in
 
 
 ## ⬇ Installation
+Please make sure you have read and fulfilled all requirements☝️☝️ before installing and running the application.
 ### 📦 Download Releases
 
 You can download the pre-built executable versions from the Releases section by following these steps:
@@ -106,6 +109,9 @@ You can download the pre-built executable versions from the Releases section by 
 - Extract/unzip the folder to your preferred location.
 
 - Run the executable inside (ccc-cloud.exe or ccc-standalone.exe).
+
+(for video tutorial you can click on this link)
+
 
 ### 💻 Using Source Code
 
@@ -130,6 +136,9 @@ If you want to use the source code instead of pre-built executables:
 
       python main.py
 
+(for video tutorial you can click on this link)
+
+
 #### Option 2: Clone the repository (Recommended for developers)
 
 - Install Git if you don’t have it already.
@@ -150,9 +159,87 @@ If you want to use the source code instead of pre-built executables:
 
       python main.py
 
+(for video tutorial you can click on this link)
+
 ## 🖥 App Interface
+Here is a showcase of how the application looks and what functionality it offers from the perspective of the Admin and Users:
 
+- Login Page
+<img src="https://github.com/user-attachments/assets/64f4a842-10f3-437b-9255-179342cf34ab" >
 
+The login page lets admins login and signup (only possible when there is no 'first admin' once the 'first admin' is create he can create other users or admins and provide them credentials which they can change later) 
+
+### Admin Interface
+- User Manager Page
+<img src="https://github.com/user-attachments/assets/e11ba007-3368-4287-99ee-450185384d95" />
+
+The user manager page lets the admin create new users with the Name , Age , username , password , role and type attributes. The admin can also delete and update any entries he wants. Beside The table in the upper part is a brillinat matsterpiece of a poster with a black batsman ready to smash the incoming ball in a klien blue background with the big letters showcasing the app name in full glory.
+
+- Enter stats Page
+<img src="https://github.com/user-attachments/assets/cd456225-dd6e-4553-b49b-2d9cb6ee3dcd" />
+
+The enter stats page lets the admin enter the statistics of players choosen from the list which contains all players form user manager tab . You can enter any no. of player's stats at a time 1-11) and then choose the match details. The statistics attributes default to 0 and can be traversed easily with Enter key.
+
+- Update stats Page
+<img src="https://github.com/user-attachments/assets/eabff061-aaf6-42a7-845a-5ec4fed2d3e9" />
+
+The update stats page contains 4 tables about the recent entries and lets you easily update and delete stats and match details. The stats tables are separated into batting bowling and fielding stats to make the search more quickly
+
+- Fielding overview Page
+<img src="https://github.com/user-attachments/assets/577f1608-0fed-49dc-9ab6-aa3ec7776ab8" />
+
+The fielding overview page shows two tables on the right separating the priveleged wicketkeepers from the fielders and showing thier rankings on their fielding performance . Click the plot statistics button and see the magical graphs pop out from nowhere showing efforts of each fielders and the team as a whole.
+
+- Batsmen by timeframe
+<img src="https://github.com/user-attachments/assets/1d1e3c6d-c6e8-4ee7-825e-eee1f9167c27" />
+
+The batsmen by timeframe page lets you see which batsman was most prolific in a given timeframe or if you want sort them by averages,strike rates and many more. You can also filter thier performance against a particular opponent
+
+- Batsmen by recent matches
+<img src="https://github.com/user-attachments/assets/2d5128f1-c8cf-4872-901f-288db444df4a" />
+
+Batsmen by recnet matches page lets you see which batsman is the most in-form and performed great in recent matches. This is the ultimate capatins wish come true and lets them choose thier best players.
+
+- Bowlers by timeframe
+
+<img  src="https://github.com/user-attachments/assets/caa924d6-e5e0-40e0-9308-f501f5e9a7e7" />
+
+The bowler by timeframe page lets you see who was the gun bowler in their time. More good news! you can also filter them against particular opponents , on a particular ground , in a particular format along with wide range of sorting options.
+
+- Bowlers by recent matches
+<img src="https://github.com/user-attachments/assets/8c498885-259d-43cc-84c6-681999fecdd6" />
+
+The bowlers by recent matches lets you select young pacers with better stamina and tougher attitude . Those ageing medium pacers in the name of fast bowlers getting chances on their past fantasies have nowhere to hide now.
+
+- Dashboard
+<img src="https://github.com/user-attachments/assets/b6c06695-a553-4e1b-bd26-bc50b422985c" />
+
+Combining personal info along with cool graphs this page lets the admin see their users view . Select any one of you players and see thier batting progression , bowling progression and other cool graphs.
+
+- Match by Match stats
+<img src="https://github.com/user-attachments/assets/0233ce1e-ab8f-49ee-8537-79c6d6e4400d" />
+
+All these tabs and still not satisfied , the last resort is a table that takes you down the memory lane to olden times when the player started and how his career shaped . A topping to the cake would be small tables showing averages and aggregates
+
+### User Interface
+
+Everyone views the world differently - I took that saying and implemented it here so that every player sees only their stuffs and not be distracted, overconfident or feel low comparing their stats with other players
+
+- Dashboard
+
+<img src="https://github.com/user-attachments/assets/0d942950-1329-4abb-b6a8-31062152b419" />
+
+Have seen this before ? No check again this time theres no player selector and you can only see your stats. (for users) . Also you can change username and password if you dont like what the admin gave you or some other player found out your secret keys.
+
+- Change password
+<img src="https://github.com/user-attachments/assets/1741f707-7d39-44f4-8b53-e01754b0bafa" />
+
+This interface lets users change password if they have current password . If you dont you need to see your admin (captain).
+
+- Match by match stats
+<img src="https://github.com/user-attachments/assets/1153ca0a-22d6-40ca-9be5-529d00ac10ea" />
+
+Same but different . Different because this time there is that kind hearted welcome message showing the apps hospitable side . Along with that is your whole career in one page like it or not.
 
 
 ## 🧱 Database Schema
